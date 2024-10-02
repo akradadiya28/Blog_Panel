@@ -37,7 +37,7 @@ router.post('/blog-update/:id', upload.single('blogImg'), blogAddCon.blogUpdate)
 router.get('/blog-delete/:id', isAuth, blogAddCon.blogDelete);
 
 router.get('/changepassword', isAuth, changePwdCon.changePassword);
-router.get('/changePassword', changePwdCon.changePassword);
+router.post('/changePasswordData', changePwdCon.changePasswordData);
 
 router.get('/forgotPassword', isAuth, changePwdCon.forgotPassword);
 
