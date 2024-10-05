@@ -39,6 +39,13 @@ router.get('/blog-delete/:id', isAuth, blogAddCon.blogDelete);
 router.get('/changepassword', isAuth, changePwdCon.changePassword);
 router.post('/changePasswordData', changePwdCon.changePasswordData);
 
-router.get('/forgotPassword', isAuth, changePwdCon.forgotPassword);
+router.get('/forgotPassword', changePwdCon.forgotPassword);
+router.post('/forgotPasswordData', changePwdCon.forgotPasswordData);
+
+router.get('/otp/:id', changePwdCon.otp);
+router.post('/otpCheck/:id', changePwdCon.otpCheck);
+
+router.get('/newPass/:id', changePwdCon.newPass);
+router.post('/newPassWord/:id', changePwdCon.newPassWord);
 
 module.exports = router;

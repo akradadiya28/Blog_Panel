@@ -27,10 +27,10 @@
         rel="stylesheet">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    <link rel="stylesheet" href="../assets/css/libs.bundle.css" />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    <link rel="stylesheet" href="../assets/css/theme.bundle.css" />
 
     <!-- Fix for custom scrollbar if JS is disabled-->
     <noscript>
@@ -75,18 +75,15 @@
             <!-- Logo-->
 
             <div class="shadow-lg rounded p-4 p-sm-5 bg-white form">
-                <h3 class="fw-bold">Forgotten password</h3>
-                <p class="text-muted">Please enter your email below and we will send you a secure link to reset your
-                    password.</p>
+                <h3 class="fw-bold">OTP Verification</h3>
 
                 <!-- Form-->
-                <form class="mt-4" action="/forgotPasswordData" method="post">
+                <form class="mt-4" action="/otpCheck/<%=id%>" method="post">
                     <div class="form-group">
-                        <label for="forgot-password" class="form-label">Email address</label>
-                        <input type="email" class="form-control" name="email" id="forgot-password"
-                            placeholder="name@email.com">
+                        <label for="forgot-password" class="form-label">Confirm OTP</label>
+                        <input type="text" class="form-control" name="otp" id="forgot-password" placeholder="Enter OTP">
                     </div>
-                    <button type="submit" class="btn btn-primary d-block w-100 my-4">Send Reset Link</button>
+                    <button type="submit" class="btn btn-primary d-block w-100 my-4">Check OTP</button>
                 </form>
                 <!-- / Form-->
 
