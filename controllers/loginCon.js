@@ -8,6 +8,8 @@ const login = (req, res) => {
 
 const loginData = async (req, res) => {
 
+    req.flash('success', 'Login Successfully');
+
     res.redirect('/');
 
 }

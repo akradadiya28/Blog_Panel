@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 const db = require('./db/db.js');
 const session = require('express-session');
 const passport = require('./middleware/passportConf.js');
+const flash = require('connect-flash');
 
 app.set('view engine', 'ejs');
 app.set('views', reqPath);
@@ -22,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(cookieParser());
+
+app.use(flash());
 
 app.use(express.static(reqPath));
 app.use("/public", express.static(path.join(__dirname, "/public")));
