@@ -22,7 +22,7 @@ const viewTopic = async (req, res) => {
     let topicData = await topicModel.find();
     // console.log("topicData", topicData);
 
-    let subTopic = await subTopicModel.find({}).populate('topics');
+    let subTopic = await subTopicModel.find({}).populate('topic');
     console.log("subTopic", subTopic);
 
 
@@ -45,8 +45,8 @@ const subTopic = async (req, res) => {
     const topic = await topicModel.find({});
     // console.log("topic", topic);
 
-    const subTopic = await subTopicModel.find({}).populate('topics');
-    // console.log("subTopic", subTopic);
+    const subTopic = await subTopicModel.find({}).populate('topic');
+    console.log("subTopic", subTopic);
 
     res.render('sub-topic', { topic, subTopic });
 }
@@ -58,7 +58,7 @@ const addSubTopic = async (req, res) => {
     try {
 
         const subTopicData = new subTopicModel({
-            topics: req.body.topicOption,
+            topic: req.body.topicOption,
             subTopic: req.body.subTopic
         })
 

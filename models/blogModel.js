@@ -5,7 +5,7 @@ const blogSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     date: { type: String, required: true, default: new Date() },
-    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'users', required: true },
 });
 
-module.exports = mongoose.model('blog', blogSchema);
+module.exports = mongoose.model('blogs', blogSchema);

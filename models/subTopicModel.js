@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const subTopicSchema = new mongoose.Schema({
     subTopic: { type: String, required: true },
-    topics: { type: mongoose.Schema.Types.ObjectId, ref: 'topic', required: true }
+    topic: { type: mongoose.Schema.Types.ObjectId, ref: 'topics', required: true }
 });
 
-module.exports = mongoose.model('subTopic', subTopicSchema);
+module.exports = mongoose.model('subTopics', subTopicSchema);

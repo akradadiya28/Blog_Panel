@@ -27,6 +27,8 @@ router.get('/profile', isAuth, userCon.profile);
 router.get('/logout', logoutCon.logout);
 
 router.get('/blog', isAuth, blogCon.blog);
+router.post('/blogComment', isAuth, blogCon.blogComment);
+
 router.get('/myblog', isAuth, blogCon.myblog);
 
 router.get('/addblog', isAuth, blogAddCon.blogAdd);

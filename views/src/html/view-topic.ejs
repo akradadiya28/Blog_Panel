@@ -492,7 +492,7 @@
                             <%subTopic.forEach((topic)=> {%>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        <%if(topic.subTopic && topic.topics._id.toString()==data._id.toString()){%>
+                                        <%if(topic.subTopic && topic.topic._id.toString()==data._id.toString()){%>
                                             <%=topic.subTopic%>
                                                 <%}%>
                                     </a>
